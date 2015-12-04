@@ -1,0 +1,5 @@
+<Trackable foo="bar" qux="abc">
+  <Trackable foo="baz">
+    <OutputComponent />
+  </Trackable>
+</Trackable>
