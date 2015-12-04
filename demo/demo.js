@@ -1,26 +1,35 @@
+'use strict'
+
 import React from 'react'
 import { render } from 'react-dom'
 
+import Playground from 'component-playground'
+
 import Trackable from '../src/trackable'
 
-var Component = React.createClass({
-	render: function() {
-		return (
-			<div {...this.props} dataCrazy="coconut">Hello {this.props.name}</div>
+import componentExample from 'raw!./examples/component.example'
+
+const OutputComponent = React.createClass({
+	render() {
+		return(
+			<div>
+				<h1>Props Passed to Child Component</h1>
+				<pre>{JSON.stringify(this.props, null, 2)}</pre>
+			</div>
 		)
 	}
 })
 
-var Container = React.createClass({
-	render: function() {
-		return (
-			<Trackable foo="bar" qux="abc">
-				<Trackable foo="baz">
-					<Component name="Jimmy" />
-				</Trackable>
-			</Trackable>
-		)
-	}
-})
+var Index = () => {
+	return (
+		<div className="component-documentation">
+			<Playground codeText={componentExample} scope={{
+				React: React, 
+				Trackable: Trackable, 
+				OutputComponent: OutputComponent
+			}} />
+		</div>
+	)
+}
 
-render(<Container />, document.getElementById('container'))
+render(<Index />, document.getElementById('container'))

@@ -18,15 +18,19 @@
   "devDependencies": {
     "assert": "^1.3.0",
     "babel-cli": "^6.1.18",
-    "babel-core": "^6.1.21",
+    "babel-core": "^6.3.2",
     "babel-loader": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
+    "component-playground": "^1.0.4",
+    "jsdom": "^7.1.1",
     "mocha": "^2.3.4",
     "parallelshell": "^2.0.0",
+    "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^0.14.2",
-    "serve": "^1.4.0",
     "react-dom": "^0.14.2",
+    "serve": "^1.4.0",
+    "testdom": "^2.0.0",
     "webpack": "^1.12.6"
   },
   "dependencies": {

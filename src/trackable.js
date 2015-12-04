@@ -30,7 +30,6 @@ export default class Trackable extends Component {
 
 	getChild() {
 		let baseChild = Children.only(this.props.children)
-		console.log(baseChild.type.displayName)
 		if (baseChild.type.displayName === 'Trackable') return baseChild
 		return cloneElement( baseChild, this.getDataAttributes() )
 	}
